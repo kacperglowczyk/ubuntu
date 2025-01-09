@@ -1,8 +1,11 @@
-const button = document.getElementById('changeColorButton');
-const body = document.body;
+const express = require('express');
+const path = require('path');
+const app = express();
 
-button.addEventListener('click', () => {
-    const randomColor = `hsl(${Math.random() * 360}, 100%, 50%)`;
-    body.style.backgroundColor = randomColor;
+// Serve static files from the 'public' directory
+app.use(express.static('public'));
+
+const PORT = process.env.PORT || 3000;
+app.listen(PORT, () => {
+    console.log(`Server is running on port ${PORT}`);
 });
-
