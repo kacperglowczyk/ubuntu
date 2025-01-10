@@ -18,7 +18,7 @@ This is a simple Node.js application with MongoDB integration, containerized usi
 - Docker
 - MongoDB
 
-##The project includes two GitHub Actions workflows:
+## The project includes two GitHub Actions workflows:
 
 ### 1. Docker Build Workflow
 - Triggers on push and pull requests to `LabDevOps` branch
