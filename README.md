@@ -35,4 +35,16 @@ This is a simple Node.js application with MongoDB integration, containerized usi
 - `PORT`: Application port (default: 3000)
 - `MONGO_URL`: MongoDB connection string (default: mongodb://mongodb:27017/app-js)
 
+## Wnioski
+
+1. Konteneryzacja
+    - Udało się stworzyć obraz Dockera z aplikacją, co umożliwia szybką i powtarzalną konfigurację środowiska.
+    - Docker Compose pozwala uruchomić jednocześnie kilka kontenerów (np. aplikację i bazę danych), dzięki czemu środowisko jest spójne i łatwe do przeniesienia.
+2. Automatyzacja (CI/CD)
+    - Dodanie GitHub Actions usprawniło proces ciągłej integracji i ciągłego dostarczania (CI/CD).
+    - Rozdzielenie workflowów na jeden do budowania obrazu Dockera oraz drugi do budowania i testowania aplikacji poprawia czytelność i ułatwia zarządzanie procesem.
+3. Łatwość rozwoju
+    - Dzięki Dockerowi i Docker Compose każdy członek zespołu może szybko uruchomić w pełni działające środowisko lokalne.
+    - Automatyczne testy w pipeline (GitHub Actions) zapewniają, że każda zmiana w repozytorium zostanie zweryfikowana przed wdrożeniem w środowisku kontenerowym.
+
 
